@@ -7,6 +7,14 @@
       mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Image x:Name="image" Source="Assets\bulb.png" />
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <local:Bulb x:Name="Bulb" />
+        <Button Grid.Row="1"
+                HorizontalAlignment="Center"
+                Click="ButtonBase_OnClick"
+                Content="On/Off" />
     </Grid>
 </Page>
